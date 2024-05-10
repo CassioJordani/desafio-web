@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procurar Produto</title>
+    <link rel="stylesheet" type="text/css" href="/public/estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Procurar Produto</h1>
+        <form action="/get" method="GET" class="search-form">
+            <select name="categoria" class="category-select">
+                <option value="0">Escolha a categoria</option>
+                <option value="eletrodomestico">Eletrodomésticos</option>
+                <option value="moveis">Móveis</option>
+            </select>
+            <button type="submit" class="button">Filtrar</button>
+        </form>
+        <a href="/" class="back-link">Voltar à lista de produtos</a>
+    </div>
+</body>
+</html>

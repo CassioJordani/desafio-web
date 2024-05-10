@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lojinha</title>
+    <link rel="stylesheet" type="text/css" href="/public/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Lojinha</h1>
+    </header>
+    
+    <div class="container">
+        <form action="/" method="GET" class="search-form">
+            <select name="categoria" class="category-select">
+                <option value="0">Escolha a categoria</option>
+                <option value="eletrodomestico">Eletrodomésticos</option>
+                <option value="moveis">Móveis</option>
+            </select>
+            <button type="submit" class="button">Filtrar</button>
+        </form>
+        
+        <ul class="product-list">
+            <% produtos.forEach(function(produto){ %>
+                <li class="product-item">
+                    <a href="/produto/<%= produto.nome %>">
+                        <h2><%= produto.nome %></h2>
+                        <p class="price">Preço: R$ <%= produto.preco.toFixed(2) %></p>
+                        <p class="category">Categoria: <%= produto.categoria %></p>
+                    </a>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+
+    <footer>
+        <p>Rodapé da loja</p>
+    </footer>
+</body>
+</html>
